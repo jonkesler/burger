@@ -1,0 +1,63 @@
+ul {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+  
+.label {
+  font-weight: bold;
+}
+  
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+  
+.form-group {
+  margin-bottom: 5px;
+}
+
+tr {
+  text-align: left;
+  padding: 15px;
+}
+
+/* #container {
+  width: 100%;
+  background-color: red;
+  height: 400px;
+} */
+
+/* #container1 {
+  width: 100%;
+  background-color: #ffcc33;
+  height: 300px;
+}
+
+#container2 {
+  width: 100%;
+  background-color: #33adff;
+  height: 300px;
+} */
+
+#first {
+  width: 40%;
+  float: left;
+  height: 300px;
+  background-color: blue;
+}
+
+#second {
+  width: 20%;
+  float: left;
+  height: 300px;
+  background-color: green;
+}
+
+#third {
+  width: 40%;
+  float: left;
+  background-color: red;
+  height: 300px;
+}

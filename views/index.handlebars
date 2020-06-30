@@ -1,38 +1,56 @@
-<h1>Burgers!</h1>
+<div class="row">
+<h2>Burgers!</h2>
+<img src="/assets/img/burger.jpg" alt="Cartoon Hamberger" style="width:300px;height:250px;>
+</row>
 
-{{!-- <h2>Cats that are not sleepy!</h2> --}}
+<div class="row">
+<div id="container1"></div>
 
-<ul>
-  {{#each Burgers}}
-    {{#unless devoured}}
-      {{> Burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+    <div id="first">
+          <h2>New</h2>
+      {{!-- <ul> --}}
+        {{#each burgers}}
 
-<h2>Devoured!</h2>
+          {{#unless devoured}}
+            {{> burgers/burger-block state=false}}
+          {{/unless}}
+        {{/each}}
+      {{!-- </ul> --}}
+    </div>
+    <div id="second">
+      <h2>test</h2>
+    </div>
 
-<ul>
-  {{#each Burgers}}
-    {{#if devoured}}
-      {{> Burgers/burger-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+    <div id="third">
+      <h2>Devoured!</h2>
+    {{!-- <ul> --}}
+      {{#each burgers}}
+        {{#if devoured}}
+          {{> burgers/burger-block state=true}}
+          {{!-- looks at burger-block for data layout --}}
+        {{/if}}
+      {{/each}}
+    {{!-- </ul> --}}
+    </div>
+</div>
+</div>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+<div id="container2">
+  {{!-- <div class="col-sm-2"> --}}
+  <h2>Add a Burger</h2>
+    <form class="create-form">
 
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="burger_name">
-  </div>
+      <div class="form-group">
+        <label for="ca">Burger Name:</label>
+        <input type="text" id="ca" name="burger_name">
+      </div>
 
-  <div class="form-group">
-    <label for="devoured">Sleepy?</label><br>
-    <input type="radio" name="devoured" value="1" checked> devoured!<br>
-    <input type="radio" name="devoured" value="0">
-  </div>
+      <div class="form-group">
+        <input type="hidden" name="devoured" value="0" >
+      </div>
 
-  <button type="submit">Add Burger</button>
-</form>
+      <button type="submit">Submit</button>
+      </form>
+  {{!-- </div> --}}
+</div>
+

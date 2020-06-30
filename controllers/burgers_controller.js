@@ -11,18 +11,22 @@ router.get("/", function(req, res) {
       burgers: data
     };
     console.log(hbsObject);
+    console.log("hbsObject");
     res.render("index", hbsObject);
   });
 });
 
 router.post("/api/burgers", function(req, res) {
   var newBurger = {
-    burger_name: req.body.name,
-    devoured: JSON.parse(req.body.devoured.toLowerCase())
+    burger_name: req.body.burger_name,
+
+    // devoured: JSON.parse(req.body.devoured.toLowerCase())
+    devoured: false
   };
   burgers.create(newBurger, function(result) {
+    console.log(newBurger);
     // Send back the naem of new burger
-    res.json({ burger_name: result.burger_name });
+    res.json({ id: result.insertId });
   });
 });
 
@@ -32,7 +36,10 @@ router.put("/api/burgers/:id", function(req, res) {
   console.log("condition", condition);
   burgers.update(
     {
-      devoured: JSON.parse(req.body.devoured.toLowerCase())
+      // devoured: JSON.parse(req.body.devoured.toLowerCase())
+      // devoured: JSON.parse(req.body.devoured)
+      // devoured: req.body.devoured
+      devoured: true
     },
     condition,
     function(result) {

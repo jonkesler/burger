@@ -1,0 +1,50 @@
+<h2>Burgers!</h2>
+<img src="/assets/img/burger.jpg" alt="Cartoon Hamberger" style="width:300px;height:250px;>
+<table style="width:100%">
+  <tr>
+    <td>
+      <ul>
+        {{#each burgers}}
+
+          {{#unless devoured}}
+            {{> burgers/burger-block state=false}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </td>
+<h2>Devoured!</h2>
+  <td>
+    <ul>
+      {{#each burgers}}
+        {{#if devoured}}
+          {{> burgers/burger-block state=true}}
+          {{!-- looks at burger-block for data layout --}}
+        {{/if}}
+      {{/each}}
+    </ul>
+  </td>
+</tr>
+
+    {{!-- <div class="row">
+      <div class="col-sm-12"> --}}
+<tr>
+  <td>
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="burger_name">
+  </div>
+
+  <div class="form-group">
+    {{!-- <label for="devoured">devoured?</label><br> --}}
+    <input type="hidden" name="devoured" value="0" >
+    {{!-- <input type="radio" name="devoured" value="0"> devoured! --}}
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
+</td>
+</tr>
+</table>
