@@ -44,7 +44,8 @@ Next, install the application dependencies.
 
 Next, install the database.
 
-        Open the db folder then the schema.sql file.  Copy the contents and run in MySQL.  Next open the seeds.sql file and copy and run it's contents in MySQL.
+        Open the db folder then the schema.sql file.  Copy the contents and run in MySQL.  
+        Next open the seeds.sql file and copy and run it's contents in MySQL.
         
 Finally, run the node server locally.
 
