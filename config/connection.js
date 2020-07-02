@@ -7,19 +7,19 @@ if(process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
 connection = mysql.createConnection({
-  host: "y5s2h87f6ur56vae.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-  user: "ctr9mdalk6l38ysr",
-  password: "un6cmnlxbiintc0r",
-  database: "h10jiht7e9s8e42a"
-});
-};
-
-// host: "localhost",
-// user: "root",
-// password: "root",
-// database: "burgers_db"
+//   host: "y5s2h87f6ur56vae.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+//   user: "ctr9mdalk6l38ysr",
+//   password: "un6cmnlxbiintc0r",
+//   database: "h10jiht7e9s8e42a"
 // });
 // };
+
+      host: "localhost",
+      user: "root",
+      password: "root",
+      database: "burgers_db"
+  });
+};
 
 // = mysql.createConnection({
 //   host: "localhost",
