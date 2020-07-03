@@ -59,7 +59,7 @@ Now, open the local application on port 8080 at the URL: `http://localhost:8080`
       
 ## Demo
 
-The demo of the burger eating application can be found [here](/https://jkeslerburger.herokuapp.com//).
+The demo of the burger eating application can be found [here](https://jkeslerburger.herokuapp.com//).
 
 
 
