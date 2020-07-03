@@ -6,11 +6,10 @@
         <h1 id="color-override">Eat-Da-Burger</h1>
         <p id="color-override">Make burgers, devoure burgers.</p>
         <br>
-        <img src="/assets/img/burger.jpg" alt="Cartoon Hamberger" style="width:350px;height:300px;>
+        <img src="/assets/img/burger.jpg" alt="Cartoon Hamberger" style="width:350px;height:300px;">
       </div>
       <div class="col-sm-5">
         <h2 id="color-override">Make a Burger</h2>
-        <panel>
           <form class="create-form">
             <div class="form-group">
               <label for="ca">Burger Name:</label>
@@ -21,45 +20,44 @@
             </div>
             <button type="submit">Submit</button>
           </form>
-        </panel>
       </div>
     </div>
   </div>
 
   <div class="row">
-    {{!-- <div class="container"> --}}
-    <div class="col-sm-5">
-      <div class="card">
-        <div class="card-header" id="left"><strong>New Burgers</strong></div>
-          <div class="card-body">
-            <ul>
-              {{#each burgers}}
-                {{#unless devoured}}
-                  <span><strong> {{> burgers/burger-block state=false}} </strong></span>
-                {{/unless}}
-              {{/each}}
-            </ul>
-          </div>
+    <div class="container">
+      <div class="col-sm-5">
+        <div class="card">
+          <div class="card-header" id="left"><strong>New Burgers</strong></div>
+            <div class="card-body">
+              <ul>
+                {{#each burgers}}
+                  {{#unless devoured}}
+                    <span><strong> {{> burgers/burger-block state=false}} </strong></span>
+                  {{/unless}}
+                {{/each}}
+              </ul>
+            </div>
+            
         </div>
       </div>
-    </div>
 
-    <div class="col-sm-5">
-      <div class="card">
-        <div class="card-header" id="right"><strong>Devoured Burgers</strong></div>
-          <div class="card-body">
-            <ul>
-              {{#each burgers}}
-                {{#if devoured}}
-                  <span><strong> {{> burgers/burger-block state=true}} </strong></span>
-                {{/if}}
-              {{/each}}
-            </ul>
+      <div class="col-sm-5">
+        <div class="card">
+          <div class="card-header" id="right"><strong>Devoured Burgers</strong></div>
+            <div class="card-body">
+              <ul>
+                {{#each burgers}}
+                  {{#if devoured}}
+                    <span><strong> {{> burgers/burger-block state=true}} </strong></span>
+                  {{/if}}
+                {{/each}}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  {{!-- </div> --}}
 
 </div>
